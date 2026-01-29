@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venue</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <span id="header-project-name" class="header-project"></span>
+        <div class="header-actions">
+          <button id="refresh-btn" class="icon-btn" title="Refresh">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12a9 9 0 11-2.636-6.364" stroke-linecap="round"/>
+              <path d="M21 3v6h-6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="menu-wrapper">
+          <button id="menu-btn" class="icon-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="1"/>
+              <circle cx="12" cy="5" r="1"/>
+              <circle cx="12" cy="19" r="1"/>
+            </svg>
+          </button>
+          <div id="menu-dropdown" class="dropdown hidden">
+            <button id="change-project-btn">Change Project</button>
+            <button id="logout-btn">Logout</button>
+          </div>
+          </div>
+        </div>
+      </header>
+
+      <main id="content">
+        <div id="auth-view" class="view">
+          <div class="auth-container">
+            <svg class="vercel-logo" width="40" height="36" viewBox="0 0 76 65" fill="currentColor">
+              <path d="M37.5274 0L75.0548 65H0L37.5274 0Z"/>
+            </svg>
+            <h2>Connect to Vercel</h2>
+            <form id="token-form">
+              <input type="password" id="token-input" placeholder="Paste access token..." autocomplete="off" />
+              <button type="submit" class="primary-btn">Connect</button>
+            </form>
+            <a id="get-token-btn" class="token-link">Create token on Vercel →</a>
+          </div>
+        </div>
+
+        <div id="project-select-view" class="view hidden">
+          <div class="project-select-container">
+            <h2>Select Project</h2>
+            <input type="text" id="project-search" placeholder="Search projects..." />
+            <ul id="project-list"></ul>
+            <a id="project-logout-btn" class="token-link">Logout</a>
+          </div>
+        </div>
+
+        <div id="deployments-view" class="view hidden">
+          <ul id="deployment-list"></ul>
+          <div id="empty-state" class="hidden">
+            <p>No deployments found</p>
+          </div>
+        </div>
+
+        <div id="loading-view" class="view hidden">
+          <div class="spinner"></div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
