@@ -4,6 +4,8 @@ A minimal macOS menubar app for monitoring Vercel deployments.
 
 ▲ Green = Ready · Yellow = Building · Red = Failed
 
+![venue-demo](https://github.com/user-attachments/assets/87c96a22-9cac-4e5e-8420-395fc31c6fee)
+
 ## Install
 
 Requires [Rust](https://rustup.rs/) and [Bun](https://bun.sh/).
